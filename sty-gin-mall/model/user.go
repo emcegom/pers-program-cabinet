@@ -1,6 +1,9 @@
 package model
 
-import "gorm.io/gorm"
+import (
+	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
+)
 
 type User struct {
 	gorm.Model
@@ -13,3 +16,17 @@ type User struct {
 	Money          string
 	Relations      []User `gorm:"many2many:relation;"`
 }
+
+func (user *User) SetPassword(password string) error {
+	bytes, err := bcrypt.GenerateFromPassword([]byte(password), PasswordCost)
+	if err != nil {
+		return err
+	}
+	user.PasswordDigest = string(bytes)
+	return err
+}
+
+const (
+	PasswordCost        = 12
+	Active       string = "active"
+)
