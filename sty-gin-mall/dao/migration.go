@@ -2,7 +2,7 @@ package dao
 
 import (
 	"fmt"
-	"gin_mall_tmp/model"
+	"sty-gin-mall/model"
 )
 
 func migration() {
