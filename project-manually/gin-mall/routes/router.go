@@ -1,10 +1,10 @@
 package routes
 
 import (
+	api "gin-mall/api/v1"
+	"gin-mall/middleware"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	api "proj-gin-mall/api/v1"
-	"proj-gin-mall/middleware"
 )
 
 func NewRouter() *gin.Engine {

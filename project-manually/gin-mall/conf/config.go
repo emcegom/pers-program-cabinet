@@ -1,8 +1,8 @@
 package conf
 
 import (
+	"gin-mall/dao"
 	"gopkg.in/ini.v1"
-	"proj-gin-mall/dao"
 	"strings"
 )
 

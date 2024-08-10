@@ -1,6 +1,6 @@
 package serializer
 
-import "proj-gin-mall/pkg/e"
+import "gin-mall/pkg/e"
 
 type Response struct {
 	Status int         `json:"status"`

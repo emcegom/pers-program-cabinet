@@ -1,9 +1,9 @@
 package v1
 
 import (
+	"gin-mall/service"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"proj-gin-mall/service"
 )
 
 func UserRegister(ctx *gin.Context) {

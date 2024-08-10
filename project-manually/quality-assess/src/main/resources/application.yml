@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: quality-assess
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/demo?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      idle-timeout: 180000
+      connection-timeout: 30000

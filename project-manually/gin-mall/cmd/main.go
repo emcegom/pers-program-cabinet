@@ -1,8 +1,8 @@
 package main
 
 import (
-	"proj-gin-mall/conf"
-	"proj-gin-mall/routes"
+	"gin-mall/conf"
+	"gin-mall/routes"
 )
 
 func main() {
