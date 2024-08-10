@@ -2,8 +2,8 @@ package conf
 
 import (
 	"gopkg.in/ini.v1"
+	"proj-gin-mall/dao"
 	"strings"
-	"sty-gin-mall/dao"
 )
 
 var (

@@ -3,7 +3,7 @@ package v1
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"sty-gin-mall/service"
+	"proj-gin-mall/service"
 )
 
 func UserRegister(ctx *gin.Context) {

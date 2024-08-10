@@ -3,8 +3,8 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	api "sty-gin-mall/api/v1"
-	"sty-gin-mall/middleware"
+	api "proj-gin-mall/api/v1"
+	"proj-gin-mall/middleware"
 )
 
 func NewRouter() *gin.Engine {

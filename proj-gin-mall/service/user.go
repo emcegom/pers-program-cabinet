@@ -2,11 +2,11 @@ package service
 
 import (
 	"context"
-	"sty-gin-mall/dao"
-	"sty-gin-mall/model"
-	"sty-gin-mall/pkg/e"
-	"sty-gin-mall/serializer"
-	"sty-gin-mall/util"
+	"proj-gin-mall/dao"
+	"proj-gin-mall/model"
+	"proj-gin-mall/pkg/e"
+	"proj-gin-mall/serializer"
+	"proj-gin-mall/util"
 )
 
 type UserService struct {

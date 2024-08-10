@@ -3,7 +3,7 @@ package dao
 import (
 	"context"
 	"gorm.io/gorm"
-	"sty-gin-mall/model"
+	"proj-gin-mall/model"
 )
 
 type UserDao struct {
