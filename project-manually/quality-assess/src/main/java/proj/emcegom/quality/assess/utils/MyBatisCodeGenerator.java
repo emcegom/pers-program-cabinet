@@ -10,7 +10,7 @@ import java.util.Collections;
 public class MyBatisCodeGenerator {
 
     public static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    public static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3307/demo?useSSL=false";
+    public static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3307/quality-assess?useSSL=false";
 
     public static final String USER_NAME = "root";
     public static final String PASSWORD = "123456";
@@ -20,10 +20,10 @@ public class MyBatisCodeGenerator {
     public static final String MAIN_MAPPER_PATH = "/src/main/resources/mapper";
 
 
-    public static final String PACKAGE_NAME = "pers.emcegom.testing.platform";
+    public static final String PACKAGE_NAME = "proj.emcegom.quality.assess";
     public static final String MODULE_NAME = "";
 
-    public static final String TABLE_NAME = "demo_user";
+    public static final String TABLE_NAME = "user";
 
     private static final String TABLE_PREFIX = "";
 
