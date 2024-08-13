@@ -3,6 +3,7 @@ package proj.emcegom.quality.assess.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.json.JacksonJsonParser;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import proj.emcegom.quality.assess.QualityAssessApplication;
