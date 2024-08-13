@@ -76,7 +76,7 @@ public class JacksonUtil {
             return parser.call();
         } catch (Exception ex) {
             if (check.isAssignableFrom(ex.getClass())) {
-                throw new JsonCastException("Json process exception", ex);
+                throw new IllegalArgumentException(ex);
             }
             throw new IllegalStateException(ex);
         }
