@@ -11,10 +11,12 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 import proj.emcegom.quality.assess.annotation.Log;
 import proj.emcegom.quality.assess.enums.BusinessType;
-import proj.emcegom.quality.assess.model.entity.LogEntity;
 import proj.emcegom.quality.assess.utils.JacksonUtil;
+import proj.emcegom.quality.assess.utils.LogUtil;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.UUID;
 
 @Aspect
 @Component
@@ -41,18 +43,18 @@ public class LogAspect {
     }
 
     private void handleLog(ProceedingJoinPoint pjp, long cost, Object result) {
-        MethodSignature signature = (MethodSignature) pjp.getSignature();
-        Method method = signature.getMethod();
-        Log logAnnotation = method.getAnnotation(Log.class);
-        Object[] args = pjp.getArgs();
-        log.info(LogEntity.builder()
-                .method(method.getName())
-                .cost(cost)
-                .inputParam(args)
-                .outputParam(result)
-                .businessType(logAnnotation.businessType())
-                .title(logAnnotation.title())
-                .build().toString());
+        try {
+            MethodSignature signature = (MethodSignature) pjp.getSignature();
+            Method method = signature.getMethod();
+            Object[] args = pjp.getArgs();
+            String methodName = method.getName();
+            Log logAnnotation = method.getAnnotation(Log.class);
+            String traceId = UUID.randomUUID().toString();
+            log.info(LogUtil.template(traceId, methodName, logAnnotation.businessType(), logAnnotation.title(), JacksonUtil.toJSONString(args)));
+            log.info(LogUtil.template(traceId, methodName, cost, JacksonUtil.toJSONString(result)));
+        } catch (Exception e) {
+            log.error("handleLog error : {}", e.getMessage());
+        }
     }
 
     private void handleException(ProceedingJoinPoint pjp, Throwable e) {

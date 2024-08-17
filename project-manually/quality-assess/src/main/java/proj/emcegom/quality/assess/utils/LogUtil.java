@@ -3,9 +3,9 @@ package proj.emcegom.quality.assess.utils;
 public class LogUtil {
 
 
-    public static String template(String... logs) {
+    public static String template(Object... logs) {
         StringBuilder sb = new StringBuilder();
-        for (String log : logs) {
+        for (Object log : logs) {
             sb.append("[").append(log).append("]");
         }
         return sb.toString();

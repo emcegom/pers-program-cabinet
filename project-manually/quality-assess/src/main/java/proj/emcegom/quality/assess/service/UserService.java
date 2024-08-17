@@ -1,5 +1,6 @@
 package proj.emcegom.quality.assess.service;
 
+import proj.emcegom.quality.assess.annotation.Log;
 import proj.emcegom.quality.assess.model.dto.UserDTO;
 import proj.emcegom.quality.assess.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -14,6 +15,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface UserService extends IService<User> {
 
-    void register(UserDTO user);
+    UserDTO register(UserDTO user);
 
 }

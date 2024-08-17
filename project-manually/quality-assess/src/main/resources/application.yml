@@ -23,3 +23,8 @@ server:
   port: 8090
 logging:
   config: classpath:logback.xml
+
+jwt:
+  token:
+    secretKey: fSDGKXC==fhdZIFDHJDgk
+    expireTimeInSec: 3600

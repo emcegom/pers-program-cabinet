@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import proj.emcegom.quality.assess.annotation.Log;
 import proj.emcegom.quality.assess.common.Response;
 import proj.emcegom.quality.assess.enums.RespStatus;
 import proj.emcegom.quality.assess.exception.QABusinessException;
@@ -35,6 +36,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
+    @Log
     public Response register(@RequestBody(required = true) UserDTO user) {
         try {
             userService.register(user);

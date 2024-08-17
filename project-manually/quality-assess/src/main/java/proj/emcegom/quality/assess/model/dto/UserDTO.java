@@ -9,6 +9,8 @@ import lombok.*;
 @NoArgsConstructor
 public class UserDTO {
 
+    private Integer id;
+
     private String username;
 
     private String name;
@@ -16,5 +18,7 @@ public class UserDTO {
     private String password;
 
     private String email;
+
+    private String token;
 
 }
